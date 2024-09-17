@@ -73,7 +73,7 @@ function App() {
             <div className="fixed bottom-0 mb-5 w-[100%]">
                 <hr className="bg-black w-[100%] mt-5 mb-5"/>
                 <p>You can view the source code <a className="hover:text-indigo-700 text-indigo-500"
-                                                   href="https://arxiv.org/pdf/2206.04437"
+                                                   href="https://github.com/shinlee03/tile-estimator/"
                                                    target="_blank">here</a>.</p>
             </div>
 
