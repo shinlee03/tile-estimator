@@ -26,7 +26,7 @@ function App() {
 
     return (
     <>
-        <div className="p-5 flex flex-col items-start font-roboto">
+        <div className="p-5 flex flex-col items-start font-roboto w-screen h-screen mb-[60px]">
             <h1 className="text-4xl font-bold">Tiles Filling Estimator</h1>
             <hr className="bg-black w-[100%] mt-5 mb-5 "/>
             <h2 className="text-lg font-bold pb-5">What the heck does this do?</h2>
@@ -40,7 +40,7 @@ function App() {
             <p>Enter the dimensions of your wall (M, N). The tool will spit out the numbers very soon!</p>
             <hr className="bg-black w-[100%] mt-5 mb-5 "/>
             <form className="flex flex-col">
-                <TextField id="outlined-basic" required margin="normal" label="N" variant="outlined" defaultValue={2}
+                <TextField id="outlined-basic" required margin="normal" label="N" variant="outlined" defaultValue={2} className="z-0"
                            onChange={(e) => {
                                if (e.target.value == "") {
                                    setN(0);
@@ -53,7 +53,7 @@ function App() {
                                }
                            }}>{n}</TextField>
 
-                <TextField id="outlined-basic" required margin="normal" label="M" variant="outlined" defaultValue={2}
+                <TextField id="outlined-basic" required margin="normal" label="M" variant="outlined" defaultValue={2} className="z-0"
                            onChange={(e) => {
                                if (e.target.value == "") {
                                    setM(0);
@@ -69,10 +69,9 @@ function App() {
             <h2 className="text-lg pt-5 text-indigo-800 mb-5">Number of ways to assemble = {calculation}</h2>
 
             <p>Work in Progress - Displaying Generating Functions for non-2X1 blocks</p>
-
-            <div className="fixed bottom-0 mb-5 w-[100%]">
-                <hr className="bg-black w-[100%] mt-5 mb-5"/>
-                <p>You can view the source code <a className="hover:text-indigo-700 text-indigo-500"
+            <div className="fixed bottom-0 w-[100%] bg-white">
+                <hr className="bg-black w-[100%] mb-5"/>
+                <p className="pb-5">You can view the source code <a className="hover:text-indigo-700 text-indigo-500"
                                                    href="https://github.com/shinlee03/tile-estimator/"
                                                    target="_blank">here</a>.</p>
             </div>
